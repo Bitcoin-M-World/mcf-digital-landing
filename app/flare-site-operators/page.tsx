@@ -1,86 +1,44 @@
 import DownloadButton from '@/components/DownloadButton'
-import type { Metadata } from 'next'
+import IllustrationStrip from '@/components/IllustrationStrip'
 
-export const metadata: Metadata = {
-  title: 'Flare Site Operators — Capture waste gas, cut emissions, mint bitcoin | MCF.DIGITAL',
-  description:
-    'Blueprint for on-lease power + compute at flare sites. Screen, structure, deploy, and operate with MRV-ready reporting and weeks-to-first-hash timelines.',
-  openGraph: {
-    title: 'Flare Site Operators — Blueprint | MCF.DIGITAL',
-    description:
-      'Stop burning money. Capture waste gas, reduce emissions, and generate pad revenue with a proven on-lease power + compute stack.',
-    type: 'article',
-  },
-}
-
-export default function FlarePage(){
+export default function FlareSiteOperatorsPage() {
   return (
-    <>
-      <header className="hero">
-        <div className="poster" style={{background:"url('/assets/flare-hero.jpg') center/cover no-repeat"}} />
-        <div className="scrim" />
-        <div className="content wrap">
-          <div className="kicker">Blueprint</div>
-          <h1>Stop burning money. Start minting.</h1>
-          <p className="sub">
-            Turn waste gas into on-pad revenue with on-lease power and compute. We fit within your lease,
-            safety, and offtake realities—then deliver weeks-to-first-hash with audit-ready MRV.
-          </p>
-          <div className="cta-row">
-            <DownloadButton label="Flare Site Operators Blueprint" slug="flare-site-operators" />
-          </div>
+    <main>
+      <section className="wrap">
+        <div className="kicker">Flaring → Compute</div>
+        <h1>Flare Site Operators</h1>
+        <p className="lead">
+          Shrink flares, improve optics, and keep production moving. We design fast, field-ready deployments that meet
+          safety and lease requirements.
+        </p>
+        <div className="sp-16" />
+        <DownloadButton label="Download: Flare → Bitcoin Blueprint" slug="flare-site-operators" />
+      </section>
+
+      <section className="wrap">
+        <h2>Why operators call us</h2>
+        <div className="grid cols-3">
+          <div className="card"><h3>Compliance optics</h3><p>Show visible progress on emissions with a plan that can actually be executed on-lease.</p></div>
+          <div className="card"><h3>Safe, simple layouts</h3><p>Setbacks, interconnects, and protections in plain English diagrams your team can follow.</p></div>
+          <div className="card"><h3>Weeks-to-first-hash</h3><p>Standardized packages and vendor coordination to shorten time from decision to power-up.</p></div>
         </div>
-      </header>
+      </section>
 
-      <main>
-        <section className="wrap">
-          <h2>What you get</h2>
-          <div className="grid cols-3">
-            <div className="card">
-              <h3>Clear carve-outs</h3>
-              <p>Structures that respect existing offtake & MVC so partners stay aligned and deals actually clear.</p>
-            </div>
-            <div className="card">
-              <h3>Custody-first stack</h3>
-              <p>On-lease power + compute with proper metering, custody, and auditability—no black-box hosting.</p>
-            </div>
-            <div className="card">
-              <h3>MRV that stands up</h3>
-              <p>Measurement & reporting mapped to OGMP-style frameworks. Show real emissions reduction.</p>
-            </div>
-            <div className="card">
-              <h3>Weeks to first hash</h3>
-              <p>Standardized mobile kits and a tight deployment playbook collapse timelines and risk.</p>
-            </div>
-            <div className="card">
-              <h3>Tax & depreciation</h3>
-              <p>Capex ownership and accelerated depreciation options where applicable; clean reporting flows.</p>
-            </div>
-            <div className="card">
-              <h3>Field-serviceable gear</h3>
-              <p>UL-class equipment, correct protections, and layouts built for dust, heat, and weather.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="wrap">
-          <h2>How it works</h2>
-          <div className="grid cols-3">
-            <div className="card"><h3>1) Screen</h3><p>Flow, pressure, composition, access, permitting. Fast go/no-go.</p></div>
-            <div className="card"><h3>2) Structure</h3><p>Carve-out %, custody, depreciation, and reporting agreed up-front.</p></div>
-            <div className="card"><h3>3) Kit</h3><p>Right-size power + compute; air or immersion; correct setbacks and clearances.</p></div>
-            <div className="card"><h3>4) Deploy</h3><p>Pad prep, interconnect, sync, burn-in. Weeks to first hash with defined hand-offs.</p></div>
-            <div className="card"><h3>5) Operate</h3><p>Runbooks, service cadence, MRV & revenue reporting. No mystery boxes.</p></div>
-          </div>
-        </section>
-
-        <section className="wrap">
-          <h2>Get the blueprint</h2>
-          <p className="lead">Technical overview, deployment checklist, and reporting templates.</p>
-          <div className="sp-12" />
-          <DownloadButton label="Flare Site Operators Blueprint" slug="flare-site-operators" />
-        </section>
-      </main>
-    </>
+      {/* Flare illustrations */}
+      <section className="wrap">
+        <h2>Field layouts &amp; protections</h2>
+        <p className="lead">Layouts that meet lease terms, safety clearances and weather realities.</p>
+        <div className="sp-16" />
+        <IllustrationStrip
+          cols={3}
+          ratio="16 / 9"
+          items={[
+            { src: '/assets/illustrations/flare-sites.png', alt: 'Flare site overview', caption: 'Flare site overview' },
+            { src: '/assets/illustrations/flare-sites-2.png', alt: 'Power path & setbacks', caption: 'Power path & setbacks' },
+            { src: '/assets/illustrations/flare-sites-3.png', alt: 'Container & clearances', caption: 'Container & clearances' },
+          ]}
+        />
+      </section>
+    </main>
   )
 }
