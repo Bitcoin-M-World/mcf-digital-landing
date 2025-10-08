@@ -26,14 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div id="progress" aria-hidden />
         <LeadProvider>
-          <nav className="nav">
-            <div className="inner wrap">
-              <div className="brand">
-                <span className="dot" /> MCF.DIGITAL
-              </div>
-              <SiteNav />
-            </div>
-          </nav>
+          {/* FIX: Removed the redundant <nav> and <div> wrappers. 
+                   Only the single SiteNav component is now rendered. */}
+          <SiteNav />
 
           <ProgressBar />
 

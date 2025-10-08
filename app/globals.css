@@ -80,11 +80,21 @@ section{padding:72px 0;border-bottom:1px solid var(--line)}
   .hamburger:hover{background:#ffffff10}
 }
 
-/* Mobile overlay menu */
+/* Mobile overlay menu - FIX APPLIED HERE */
 .mobile-menu{
   position:fixed;inset:0;background:#0009;backdrop-filter:blur(6px) saturate(140%);
-  z-index:10000;display:flex;align-items:flex-start;justify-content:flex-end;
+  z-index:10000;
+  display:none; /* ADDED: Ensure it is hidden by default, relying only on JS/React to show it */
+  align-items:flex-start;
+  justify-content:flex-end;
 }
+/* ADDED: On smaller screens where the hamburger is visible, allow it to be displayed via React's conditional rendering */
+@media (max-width: 980px) {
+  .mobile-menu {
+    display: flex;
+  }
+}
+
 .mobile-panel{
   width:min(100%, 360px);height:100%;background:var(--card);border-left:1px solid var(--line);
   box-shadow:-12px 0 30px rgba(0,0,0,.35);padding:16px;animation:slideIn .18s ease-out;
