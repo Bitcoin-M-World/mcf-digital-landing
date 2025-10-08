@@ -1,12 +1,22 @@
+// app/layout.tsx
 import type { Metadata } from 'next'
 import './globals.css'
-import Link from 'next/link'
 import { LeadProvider } from '@/components/LeadContext'
 import ProgressBar from '@/components/ProgressBar'
+import SiteNav from '@/components/SiteNav'
+import ContactFab from '@/components/ContactFab'
 
 export const metadata: Metadata = {
   title: 'MCF.DIGITAL — Creative Energy for Industrial Brands',
-  description: 'MCF.DIGITAL builds premium creative and digital experiences for energy, industrial, and frontier-tech brands.'
+  description:
+    'MCF.DIGITAL builds premium creative and digital experiences for energy, industrial, and frontier-tech brands.',
+  openGraph: {
+    title: 'MCF.DIGITAL — Oil, Gas & Bitcoin Infrastructure',
+    description:
+      'On-lease power and compute for flare sites, weak netbacks, bitcoin miners, and HNWI/Family Offices.',
+    type: 'website',
+    url: 'https://mcf.digital/',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,25 +25,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <ProgressBar />
-        <nav className="nav" aria-label="Primary">
-          <div className="inner wrap">
-            <Link href="/" className="brand"><span className="dot" aria-hidden="true"></span><span>MCF.DIGITAL</span></Link>
-            <div className="links" role="navigation">
-              <Link href="/flare-site-operators">Flare Site Operators</Link>
-              <Link href="/low-netback">Low Netback Sites</Link>
-              <Link href="/for-bitcoin-miners">For Bitcoin Miners</Link>
-              <Link href="/hnwi-family-offices">HNWI & Family Offices</Link>
-              <Link href="/about" className="cta">About Us</Link>
-            </div>
-          </div>
-        </nav>
-        <LeadProvider>
-          {children}
-        </LeadProvider>
+
+        {/* Top Navigation (desktop + mobile) */}
+        <SiteNav />
+
+        {/* Page content + global lead modal provider */}
+        <LeadProvider>{children}</LeadProvider>
+
+        {/* Floating contact button on all screens */}
+        <ContactFab />
+
+        {/* Global footer */}
         <footer className="wrap">
           <div className="foot">
             <small>© {year} MCF.DIGITAL</small>
-            <div className="links"><a href="#top">Back to top</a></div>
+            <div className="links">
+              <a href="/contact">Contact</a>
+              <a href="#top">Back to top</a>
+            </div>
           </div>
         </footer>
       </body>

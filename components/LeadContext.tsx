@@ -1,27 +1,39 @@
 'use client'
-import React, { createContext, useContext, useState } from 'react'
-import LeadModal from './LeadModal'
+import { createContext, useContext, useState, type ReactNode } from 'react'
+import dynamic from 'next/dynamic'
 
-export type Asset = { slug: string; label: string; fallback?: string }
+// Dynamically import the modal so it only renders on the client
+const LeadModal = dynamic(() => import('./LeadModal'), { ssr: false })
 
-type Ctx = {
-  open: (a: Asset) => void
+export type Asset = {
+  slug: string
+  label: string
+  fallback?: string
 }
 
-const LeadCtx = createContext<Ctx>({ open: () => {} })
+type LeadCtx = {
+  asset: Asset | null
+  open: (a: Asset) => void
+  close: () => void
+}
 
-export function LeadProvider({ children }: { children: React.ReactNode }){
+const Ctx = createContext<LeadCtx | null>(null)
+
+export function LeadProvider({ children }: { children: ReactNode }) {
   const [asset, setAsset] = useState<Asset | null>(null)
   const open = (a: Asset) => setAsset(a)
   const close = () => setAsset(null)
+
   return (
-    <LeadCtx.Provider value={{ open }}>
+    <Ctx.Provider value={{ asset, open, close }}>
       {children}
-      <LeadModal asset={asset} onClose={close} />
-    </LeadCtx.Provider>
+      {asset ? <LeadModal asset={asset} onClose={close} /> : null}
+    </Ctx.Provider>
   )
 }
 
-export function useLead(){
-  return useContext(LeadCtx)
+export function useLead() {
+  const v = useContext(Ctx)
+  if (!v) throw new Error('useLead must be used inside LeadProvider')
+  return v
 }
