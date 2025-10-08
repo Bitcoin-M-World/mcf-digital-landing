@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import DownloadButton from '@/components/DownloadButton'
-import IllustrationStrip from '@/components/IllustrationStrip'
+import DownloadButton from '../components/DownloadButton'
+import IllustrationStrip from '../components/IllustrationStrip'
 
 export default function HomePage() {
   return (

@@ -1,4 +1,4 @@
-import DownloadButton from '@/components/DownloadButton'
+import DownloadButton from '../../components/DownloadButton'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

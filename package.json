@@ -1,12 +1,14 @@
 {
   "name": "mcf-digital",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
+  "description": "MCF.DIGITAL website – built with Next.js 14 and React 18",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "next build"
   },
   "dependencies": {
     "next": "14.2.4",
@@ -20,5 +22,19 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
     "typescript": "5.4.2"
-  }
+  },
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=9.x"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "mcf-digital",
+    "bitcoin",
+    "flare-sites"
+  ],
+  "author": "Creative Network Live",
+  "license": "MIT"
 }
