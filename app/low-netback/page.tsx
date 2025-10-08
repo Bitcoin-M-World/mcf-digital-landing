@@ -1,5 +1,6 @@
-import DownloadButton from '@/components/DownloadButton'
-import IllustrationStrip from '@/components/IllustrationStrip'
+// app/low-netback/page.tsx
+import DownloadButton from '../../components/DownloadButton'
+import IllustrationStrip from '../../components/IllustrationStrip'
 
 export default function LowNetbackPage() {
   return (
@@ -24,7 +25,6 @@ export default function LowNetbackPage() {
         </div>
       </section>
 
-      {/* Low netbacks illustrations */}
       <section className="wrap">
         <h2>Illustrated economics &amp; rollout</h2>
         <p className="lead">Commercial clarity and physical reliability for weak netbacks.</p>
