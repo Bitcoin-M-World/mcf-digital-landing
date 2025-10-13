@@ -1,14 +1,17 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About — Senior operators for oil, gas & bitcoin infrastructure | MCF.DIGITAL',
+  title: 'About MCF.DIGITAL | Molecules to Money',
   description:
-    'We’re a tight, senior team that ships working pads: web, 3D, and content systems for energy and frontier-tech operators—plus the on-lease compute playbook.',
+    'We turn stranded gas into bitcoin. On-lease power and compute that cuts flaring, fixes weak netbacks, and lets miners produce at cost with custody-first reporting.',
   openGraph: {
-    title: 'About MCF.DIGITAL',
+    title: 'About MCF.DIGITAL | Molecules to Money',
     description:
-      'Industrial-grade design and operations for energy & frontier-tech. We turn complex pads and products into crisp systems that perform.',
+      'We turn stranded gas into bitcoin. On-lease power and compute that cuts flaring, fixes weak netbacks, and lets miners produce at cost with custody-first reporting.',
     type: 'profile',
+  },
+  alternates: {
+    canonical: '/about',
   },
 }
 

@@ -1,5 +1,21 @@
+import type { Metadata } from 'next'
 import DownloadButton from '../../components/DownloadButton'
 import IllustrationStrip from '../../components/IllustrationStrip'
+
+export const metadata: Metadata = {
+  title: 'Produce Bitcoin at Cost, Not Retail | MCF.DIGITAL',
+  description:
+    'Below-grid energy at O&G sites, hosted or JV. Custody-first payouts, UL 891 gear, air or immersion, clear fee stack, and optional hash hedge for steadier cash flow.',
+  openGraph: {
+    title: 'Produce Bitcoin at Cost, Not Retail | MCF.DIGITAL',
+    description:
+      'Below-grid energy at O&G sites, hosted or JV. Custody-first payouts, UL 891 gear, air or immersion, clear fee stack, and optional hash hedge for steadier cash flow.',
+    type: 'article',
+  },
+  alternates: {
+    canonical: '/miners',
+  },
+}
 
 export default function ForMinersPage() {
   return (

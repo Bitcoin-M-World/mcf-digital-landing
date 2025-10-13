@@ -1,6 +1,22 @@
 // app/low-netback/page.tsx
+import type { Metadata } from 'next'
 import DownloadButton from '../../components/DownloadButton'
 import IllustrationStrip from '../../components/IllustrationStrip'
+
+export const metadata: Metadata = {
+  title: 'From Basis Bite to Bitcoin, Compute Offtake | MCF.DIGITAL',
+  description:
+    'Carve out take-in-kind volumes excluded from dedications, price a pad-level COA that beats pipeline netbacks, and lift margins without reworking midstream.',
+  openGraph: {
+    title: 'From Basis Bite to Bitcoin, Compute Offtake | MCF.DIGITAL',
+    description:
+      'Carve out take-in-kind volumes excluded from dedications, price a pad-level COA that beats pipeline netbacks, and lift margins without reworking midstream.',
+    type: 'article',
+  },
+  alternates: {
+    canonical: '/netbacks',
+  },
+}
 
 export default function LowNetbackPage() {
   return (

@@ -6,6 +6,9 @@ type LeadPayload = {
   name?: string
   email?: string
   company?: string
+  phone?: string
+  telegram?: string
+  message?: string
   consent?: boolean
   asset?: string
   ts?: number

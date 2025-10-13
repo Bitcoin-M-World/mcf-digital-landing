@@ -14,6 +14,7 @@ export default function LeadModal({
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [company, setCompany] = useState('')
+  const [phone, setPhone] = useState('')
   const [telegram, setTelegram] = useState('')
   const [consent, setConsent] = useState(false)
 
@@ -31,7 +32,7 @@ export default function LeadModal({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name, email, company, telegram, consent,
+          name, email, company, phone, telegram, consent,
           asset: asset.slug,
           ts: Date.now(),
           _honeypot: '',
@@ -87,7 +88,24 @@ export default function LeadModal({
             <label> Company
               <input name="company" value={company} onChange={(e)=>setCompany(e.target.value)} placeholder="Company (optional)" autoComplete="organization" />
             </label>
-            <label> Telegram username
+            <label> Phone number
+              <input
+                required
+                type="tel"
+                name="phone"
+                value={phone}
+                onChange={(e)=>setPhone(e.target.value)}
+                placeholder="(555) 123-4567"
+                autoComplete="tel"
+                inputMode="tel"
+              />
+            </label>
+          </div>
+
+          <div className="sp-12" />
+
+          <div className="row">
+            <label style={{ gridColumn: '1 / -1' }}> Telegram username
               <input name="telegram" value={telegram} onChange={(e)=>setTelegram(e.target.value)} placeholder="@username (optional)" />
             </label>
           </div>

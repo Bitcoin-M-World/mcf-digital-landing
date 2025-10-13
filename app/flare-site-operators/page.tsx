@@ -1,5 +1,21 @@
+import type { Metadata } from 'next'
 import DownloadButton from '../../components/DownloadButton'
 import IllustrationStrip from '../../components/IllustrationStrip'
+
+export const metadata: Metadata = {
+  title: 'Flare to Bitcoin, On-lease Power and Compute | MCF.DIGITAL',
+  description:
+    'Upsize your fuel gas carve-out, meter a base volume, run pad power and compute. Cut flaring, show ESG receipts, and turn BTUs into BTC with fast deployment.',
+  openGraph: {
+    title: 'Flare to Bitcoin, On-lease Power and Compute | MCF.DIGITAL',
+    description:
+      'Upsize your fuel gas carve-out, meter a base volume, run pad power and compute. Cut flaring, show ESG receipts, and turn BTUs into BTC with fast deployment.',
+    type: 'article',
+  },
+  alternates: {
+    canonical: '/flare',
+  },
+}
 
 export default function FlareSiteOperatorsPage() {
   return (

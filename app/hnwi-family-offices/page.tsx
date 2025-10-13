@@ -2,14 +2,17 @@ import DownloadButton from '../../components/DownloadButton'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'HNWI & Small Family Offices — Real assets, clear controls | MCF.DIGITAL',
+  title: 'Bitcoin Mining, Real Assets and Depreciation | MCF.DIGITAL',
   description:
-    'White-glove production backed by real assets. SPV structures, depreciation options, custody, and reporting that stands up to diligence.',
+    'White-glove build-operate-report. SPVs, daily BTC to your wallets, hardware depreciation, evidence-grade reporting, and an optional hedge for predictability.',
   openGraph: {
-    title: 'HNWI & Small Family Offices — Brief | MCF.DIGITAL',
+    title: 'Bitcoin Mining, Real Assets and Depreciation | MCF.DIGITAL',
     description:
-      'Differentiated exposure to on-lease compute with clear risk frameworks: SPV/JV options, depreciation, hedging, and MRV reporting.',
+      'White-glove build-operate-report. SPVs, daily BTC to your wallets, hardware depreciation, evidence-grade reporting, and an optional hedge for predictability.',
     type: 'article',
+  },
+  alternates: {
+    canonical: '/investors',
   },
 }
 

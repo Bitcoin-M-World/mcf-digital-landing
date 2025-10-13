@@ -9,13 +9,13 @@ import SiteNav from '../components/SiteNav'
 import ContactFab from '../components/ContactFab'
 
 export const metadata: Metadata = {
-  title: 'MCF.DIGITAL — Creative Energy for Industrial Brands',
+  title: 'Turn Stranded Gas Into Bitcoin Production | MCF.DIGITAL',
   description:
-    'MCF.DIGITAL builds web, content, and on-lease compute systems for energy and frontier-tech teams.',
+    'We match producers, miners, and capital to build on-lease power and compute that cuts flaring, lifts pad netbacks, and lets miners produce BTC at cost.',
   openGraph: {
-    title: 'MCF.DIGITAL — Oil, Gas & Bitcoin Infrastructure',
+    title: 'Turn Stranded Gas Into Bitcoin Production | MCF.DIGITAL',
     description:
-      'Pads that pencil. Web and content that actually sell. Weeks-to-first-hash deployments built for the field.',
+      'We match producers, miners, and capital to build on-lease power and compute that cuts flaring, lifts pad netbacks, and lets miners produce BTC at cost.',
     type: 'website',
   },
 }
