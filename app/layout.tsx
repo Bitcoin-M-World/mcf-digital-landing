@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       'We match producers, miners, and capital to build on-lease power and compute that cuts flaring, lifts pad netbacks, and lets miners produce BTC at cost.',
     type: 'website',
   },
+  icons: {
+    icon: '/assets/favicon.ico',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
