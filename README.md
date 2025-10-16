@@ -1,4 +1,4 @@
-# MCF.DIGITAL (Next.js App Router)
+# MCF.DIGITAL (Next.js App Router.)
 
 ## Dev
 ```bash
