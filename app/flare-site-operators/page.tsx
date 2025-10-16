@@ -22,25 +22,29 @@ export const metadata: Metadata = {
 export default function FlareSiteOperatorsPage() {
   return (
     <main>
-      <section className="wrap">
-        <div className="kicker">Flare Sites</div>
-        <h1>Cut your flare stack, grow your sat stack</h1>
-        <p className="lead">
-          Turn fuel gas into on-lease power and compute. From flare to fair value, from BTUs to BTC.
-        </p>
-        <div className="sp-16" />
-        <div className="cta-row">
-          <Link className="btn acc" href="/contact?topic=pad-check">
-            Check my pad in 60 seconds
-          </Link>
-          <DownloadButton
-            label="Flare to Bitcoin Blueprint"
-            slug="flare-site-operators"
-            text="Download the Flare → Bitcoin Blueprint"
-          />
-          <Link className="btn" href="/contact">
-            Book a 15-minute fit call
-          </Link>
+      <section className="hero flare-hero">
+        <div className="hero-bg" aria-hidden="true" />
+        <div className="scrim" />
+        <div className="content wrap">
+          <div className="kicker">Flare Sites</div>
+          <h1>Cut your flare stack, grow your sat stack</h1>
+          <p className="lead">
+            Turn fuel gas into on-lease power and compute. From flare to fair value, from BTUs to BTC.
+          </p>
+          <div className="sp-16" />
+          <div className="cta-row">
+            <Link className="btn acc" href="/contact?topic=pad-check">
+              Check my pad in 60 seconds
+            </Link>
+            <DownloadButton
+              label="Flare to Bitcoin Blueprint"
+              slug="flare-site-operators"
+              text="Download the Flare → Bitcoin Blueprint"
+            />
+            <Link className="btn" href="/contact">
+              Book a 15-minute fit call
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -221,6 +225,10 @@ export default function FlareSiteOperatorsPage() {
           <li>Lease &amp; midstream: confirmation of fuel gas rights and any dedications.</li>
           <li>Contact: one decision-maker for scheduling and safety.</li>
         </ul>
+        <div className="sp-12" />
+        <a className="btn acc" href="#flare-pad-form">
+          Fill our form
+        </a>
       </section>
 
       <section className="wrap">
@@ -259,8 +267,9 @@ export default function FlareSiteOperatorsPage() {
         </div>
       </section>
 
-      <section className="wrap">
+      <section className="wrap" style={{ textAlign: 'center' }}>
         <h2>Stop burning money. Start minting it.</h2>
+        <div className="sp-12" />
         <div className="cta-row">
           <Link className="btn acc" href="/contact?topic=pad-check">
             Check my pad in 60 seconds
@@ -282,7 +291,7 @@ export default function FlareSiteOperatorsPage() {
           Drop in the basics and we will confirm fit, timeline, and the commercial model that matches your pad.
         </p>
         <div className="sp-16" />
-        <FlarePadForm />
+        <FlarePadForm id="flare-pad-form" />
         <div className="sp-8" />
         <p>
           <small>Not tax or investment advice. Royalty and ORRI handling per lease language.</small>

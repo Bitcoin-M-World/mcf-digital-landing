@@ -119,6 +119,15 @@ section{padding:72px 0;border-bottom:1px solid var(--line)}
 .hero .content{position:relative;z-index:2;padding:96px 0 84px;text-align:center}
 .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
+.hero.flare-hero .hero-bg{
+  position:absolute;
+  inset:0;
+  background:url('/assets/flare-hero.jpg') center/cover no-repeat;
+  filter:brightness(.55) saturate(1.08);
+  transform:scale(1.05);
+  pointer-events:none;
+}
+
 /* Buttons */
 .btn{
   --shadow: 0 1px 0 #ffffff18 inset, 0 1px 1px #0007;
@@ -164,13 +173,19 @@ footer{padding:40px 0;color:var(--muted)}
 
 /* Forms */
 label{display:block;color:var(--ink);font-weight:600}
-input,textarea{
+input,textarea,select{
   width:100%;padding:12px 12px;border-radius:12px;background:var(--surface);
   border:1px solid var(--line);color:var(--ink);
   transition:border-color .18s ease, background .18s ease, box-shadow .18s ease;
 }
 input::placeholder,textarea::placeholder{color:#8ca0b5}
-input:focus,textarea:focus{outline:none;border-color:#2a394a;box-shadow:0 0 0 3px #2a394a55}
+select{appearance:none;-webkit-appearance:none;-moz-appearance:none;padding-right:42px;cursor:pointer;line-height:1.2;
+  background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23cfe0f2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:calc(100% - 14px) 52%;background-size:12px;
+}
+select:focus-visible{outline:none}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#2a394a;box-shadow:0 0 0 3px #2a394a55}
+select::-ms-expand{display:none}
 
 /* Modal */
 #leadModal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:#0008;z-index:10000}

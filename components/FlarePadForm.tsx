@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+type FlarePadFormProps = {
+  id?: string
+}
+
 const yesNoOptions = [
   { value: 'yes', label: 'Yes' },
   { value: 'no', label: 'No' },
@@ -15,7 +19,7 @@ const modelOptions = [
   { value: 'flarehash-jv', label: 'FlareHash JV' },
 ] as const
 
-export default function FlarePadForm() {
+export default function FlarePadForm({ id }: FlarePadFormProps) {
   const router = useRouter()
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -108,7 +112,7 @@ export default function FlarePadForm() {
   }
 
   return (
-    <form onSubmit={submit} className="card" style={{ maxWidth: 900 }}>
+    <form id={id} onSubmit={submit} className="card" style={{ maxWidth: 900 }}>
       <div className="grid cols-2">
         <label> Name
           <input
@@ -184,17 +188,15 @@ export default function FlarePadForm() {
       </div>
 
       <div className="sp-12" />
-      <div className="grid cols-2">
-        <label style={{ gridColumn: '1 / -1' }}> Telegram handle
-          <input
-            value={telegram}
-            onChange={e => setTelegram(e.target.value)}
-            placeholder="@username (optional)"
-            autoComplete="off"
-            disabled={submitting}
-          />
-        </label>
-      </div>
+      <label> Telegram handle
+        <input
+          value={telegram}
+          onChange={e => setTelegram(e.target.value)}
+          placeholder="@username (optional)"
+          autoComplete="off"
+          disabled={submitting}
+        />
+      </label>
 
       <div className="sp-12" />
       <div className="grid cols-2">
