@@ -1,7 +1,15 @@
 'use client'
 import { useLead } from './LeadContext'
 
-export default function DownloadButton({ label, slug }: { label: string; slug: string }){
+export default function DownloadButton({
+  label,
+  slug,
+  text,
+}: {
+  label: string
+  slug: string
+  text?: string
+}) {
   const { open } = useLead()
   return (
     <button
@@ -9,7 +17,7 @@ export default function DownloadButton({ label, slug }: { label: string; slug: s
       onClick={() => open({ slug, label, fallback: 'https://bitcoin.org/bitcoin.pdf' })}
       aria-label={`Download ${label}`}
     >
-      Download PDF
+      {text || 'Download PDF'}
     </button>
   )
 }
