@@ -41,7 +41,7 @@ export default function FlareSiteOperatorsPage() {
               slug="flare-site-operators"
               text="Download the Flare → Bitcoin Blueprint"
             />
-            <Link className="btn" href="/contact">
+            <Link className="btn" href="https://to.tools/janik" target="_blank" rel="noopener noreferrer">
               Book a 15-minute fit call
             </Link>
           </div>
@@ -279,7 +279,7 @@ export default function FlareSiteOperatorsPage() {
             slug="flare-site-operators"
             text="Download the Flare → Bitcoin Blueprint"
           />
-          <Link className="btn" href="/contact">
+          <Link className="btn" href="https://to.tools/janik" target="_blank" rel="noopener noreferrer">
             Book a 15-minute fit call
           </Link>
         </div>
