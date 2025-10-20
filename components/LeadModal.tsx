@@ -21,11 +21,6 @@ export default function LeadModal({
   async function submit(e: React.FormEvent) {
     e.preventDefault()
 
-    // open PDF immediately (prevents popup blocking)
-    const pdfUrl = asset.fallback || 'https://bitcoin.org/bitcoin.pdf'
-    const newTab = window.open('about:blank', '_blank', 'noopener')
-    if (newTab) newTab.location.href = pdfUrl
-
     // send to /api/lead (Formspree behind the scenes)
     try {
       const res = await fetch('/api/lead', {
