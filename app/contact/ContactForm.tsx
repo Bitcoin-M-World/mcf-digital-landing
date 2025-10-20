@@ -15,6 +15,12 @@ export default function ContactForm() {
   async function submit(e: React.FormEvent) {
     e.preventDefault()
     try {
+      const trimmedMessage = message.trim()
+      const noteLines = [
+        'CONTACT FORM',
+        trimmedMessage || 'No additional message provided.',
+      ]
+
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -26,7 +32,7 @@ export default function ContactForm() {
           telegram,
           consent,
           asset: 'contact',
-          message,
+          message: noteLines.join('\n'),
           ts: Date.now(),
           _honeypot: '',
           _replyto: email,
