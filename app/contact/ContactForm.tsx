@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function ContactForm() {
@@ -11,13 +11,28 @@ export default function ContactForm() {
   const [telegram, setTelegram] = useState('')
   const [message, setMessage] = useState('')
   const [consent, setConsent] = useState(false)
+  const [topicPrefix, setTopicPrefix] = useState<string | null>(null)
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const topic = params.get('topic')
+    if (!topic) return
+
+    const topicMap: Record<string, string> = {
+      'netbacks-upload': 'LOW NETBACK',
+      'pad-check': 'FLARE SITE OPERATIONS',
+    }
+
+    const normalized = topicMap[topic] || topic.replace(/[-_]+/g, ' ').toUpperCase()
+    setTopicPrefix(normalized)
+  }, [])
 
   async function submit(e: React.FormEvent) {
     e.preventDefault()
     try {
       const trimmedMessage = message.trim()
       const noteLines = [
-        'CONTACT FORM',
+        topicPrefix ? `${topicPrefix} CONTACT FORM` : 'CONTACT FORM',
         trimmedMessage || 'No additional message provided.',
       ]
 

@@ -229,6 +229,12 @@ section{padding:72px 0;border-bottom:1px solid var(--line)}
   border:1px solid #ffffff24;background:#ffffff12;color:var(--ink);
   transition:transform .06s ease, filter .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
   box-shadow:var(--shadow);
+  font-family:inherit;
+  font-size:1rem;
+  font-weight:600;
+  line-height:1.2;
+  text-decoration:none;
+  cursor:pointer;
 }
 .btn:hover{background:#ffffff1f;border-color:#ffffff36;filter:brightness(1.02)}
 .btn:active{transform:translateY(1px)}
