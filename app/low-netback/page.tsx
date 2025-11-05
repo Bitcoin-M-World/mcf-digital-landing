@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import DownloadButton from '../../components/DownloadButton'
 import IllustrationStrip from '../../components/IllustrationStrip'
 import NetbackForm from '../../components/NetbackForm'
+import HeroVideo from '../../components/HeroVideo'
 
 export const metadata: Metadata = {
   title: 'Show Us Your Weakest Netbacks | MCF.DIGITAL',
@@ -24,7 +25,7 @@ export default function LowNetbackPage() {
   return (
     <main>
       <section className="hero netbacks-hero">
-        <div className="hero-bg" aria-hidden="true" />
+        <HeroVideo poster="/assets/netback-hero.jpg" />
         <div className="scrim" />
         <div className="content wrap hero-inner">
           <div className="hero-copy">

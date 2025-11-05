@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import HeroVideo from '../../components/HeroVideo'
 
 export const metadata: Metadata = {
   title: 'About MCF.DIGITAL | Molecules to Money',
@@ -19,7 +20,7 @@ export default function AboutPage(){
   return (
     <>
       <header className="hero">
-        <div className="poster" style={{background:"url('/assets/about-hero.jpg') center/cover no-repeat"}} />
+        <HeroVideo poster="/assets/about-hero.jpg" />
         <div className="scrim" />
         <div className="content wrap">
           <div className="kicker">Studio</div>

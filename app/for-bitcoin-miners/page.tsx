@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import IllustrationStrip from '../../components/IllustrationStrip'
 import MinersForm from '../../components/MinersForm'
+import HeroVideo from '../../components/HeroVideo'
 
 export const metadata: Metadata = {
   title: 'Produce Bitcoin at Cost, Not Retail | MCF.DIGITAL',
@@ -22,7 +23,7 @@ export default function ForMinersPage() {
   return (
     <main>
       <section className="hero miners-hero">
-        <div className="hero-bg" aria-hidden="true" />
+        <HeroVideo poster="/assets/miners-hero.jpg" />
         <div className="scrim" />
         <div className="content wrap hero-inner">
           <div className="hero-copy">

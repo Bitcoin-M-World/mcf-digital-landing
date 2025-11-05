@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import DownloadButton from '../../components/DownloadButton'
 import InvestorsForm from '../../components/InvestorsForm'
+import HeroVideo from '../../components/HeroVideo'
 
 export const metadata: Metadata = {
   title: 'White-Glove Bitcoin Production, Backed by Real Assets | MCF.DIGITAL',
@@ -22,7 +23,7 @@ export default function HnwiPage() {
   return (
     <main>
       <section className="hero investors-hero">
-        <div className="hero-bg" aria-hidden="true" />
+        <HeroVideo poster="/assets/hnwi-hero.jpg" />
         <div className="scrim" />
         <div className="content wrap hero-inner">
           <div className="hero-copy">

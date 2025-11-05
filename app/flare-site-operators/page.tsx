@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import DownloadButton from '../../components/DownloadButton'
 import FlarePadForm from '../../components/FlarePadForm'
 import IllustrationStrip from '../../components/IllustrationStrip'
+import HeroVideo from '../../components/HeroVideo'
 
 export const metadata: Metadata = {
   title: 'Cut Your Flare Stack, Grow Your Sat Stack | MCF.DIGITAL',
@@ -23,7 +24,7 @@ export default function FlareSiteOperatorsPage() {
   return (
     <main>
       <section className="hero flare-hero">
-        <div className="hero-bg" aria-hidden="true" />
+        <HeroVideo poster="/assets/flare-hero.jpg" />
         <div className="scrim" />
         <div className="content wrap">
           <div className="kicker">Flare Sites</div>

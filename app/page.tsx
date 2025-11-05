@@ -1,32 +1,13 @@
 import Link from 'next/link'
 import DownloadButton from '../components/DownloadButton'
 import IllustrationStrip from '../components/IllustrationStrip'
+import HeroVideo from '../components/HeroVideo'
 
 export default function HomePage() {
   return (
     <>
       <header className="hero">
-        {/* VIDEO BACKGROUND */}
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/assets/illustrations/home-2.png"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            filter: 'brightness(0.55) saturate(1.1)',
-          }}
-        >
-          <source src="/media/hero.mp4" type="video/mp4" />
-          {/* Fallback copy if video can't load */}
-          Your browser does not support the video tag.
-        </video>
+        <HeroVideo />
 
         <div className="scrim" />
         <div className="content wrap">
