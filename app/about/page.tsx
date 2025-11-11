@@ -175,23 +175,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="wrap">
-          <h2>Tagline ideas for MCF DIGITAL</h2>
-          <div className="grid cols-2">
-            <div className="card">
-              <p>Where molecules become money</p>
-            </div>
-            <div className="card">
-              <p>From MCF to BTC, every day</p>
-            </div>
-            <div className="card">
-              <p>Every flare stack should be a sat stack</p>
-            </div>
-            <div className="card">
-              <p>Compute at the pad, value on your books</p>
-            </div>
-          </div>
-        </section>
       </main>
     </>
   )
