@@ -55,7 +55,7 @@ export default function AboutPage() {
 
         <section className="wrap">
           <div className="grid cols-2">
-            <div className="card">
+            <div className="card gold-glow">
               <h3>Our Mission</h3>
               <p>
                 To transform wasted molecules into digital value by connecting oil &amp; gas producers with bitcoin mining
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 improve netbacks, and deliver bitcoin production at cost.
               </p>
             </div>
-            <div className="card">
+            <div className="card gold-glow">
               <h3>Our Vision</h3>
               <p>
                 A future where no MCF is wasted and where every producer, miner, and investor has a transparent,

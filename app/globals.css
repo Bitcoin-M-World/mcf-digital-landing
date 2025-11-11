@@ -262,6 +262,11 @@ section{padding:72px 0;border-bottom:1px solid var(--line)}
   transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 .card:hover{transform:translateY(-2px);border-color:#2a394a;box-shadow:0 1px 0 #ffffff12 inset, 0 8px 20px rgba(0,0,0,.35)}
+.card.gold-glow{
+  border-color:rgba(255,180,0,.6);
+  box-shadow:0 0 25px rgba(255,180,0,.18),0 1px 0 #ffffff14 inset,0 0 0 1px rgba(255,180,0,.25) inset;
+  background:linear-gradient(180deg,rgba(255,180,0,.08) 0%, rgba(11,15,19,1) 100%);
+}
 
 /* Grids */
 .grid{display:grid;gap:16px}
