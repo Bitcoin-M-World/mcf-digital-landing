@@ -119,13 +119,6 @@ export default function LowNetbackPage() {
       </section>
 
       <section className="wrap">
-        <h2>Example language for your comfort</h2>
-        <p className="lead">
-          “Operator provides a take-in-kind base volume up to X MCF/day, metered at [point], excluded from existing gathering or processing dedication, for on-lease power generation and computing. Price indexed or fixed per [schedule]. Royalty and ORRI handling per [clause].”
-        </p>
-      </section>
-
-      <section className="wrap">
         <h2>FAQ, netbacks</h2>
         <div className="grid cols-2">
           <div className="card"><h3>Will this trip our MVC?</h3><p>No. We bake explicit dedication exclusions into the paperwork.</p></div>
