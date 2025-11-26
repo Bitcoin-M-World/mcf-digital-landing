@@ -12,16 +12,18 @@ export default function IllustrationStrip({
   items,
   cols = 3,
   ratio = '16 / 9',
+  gap = 16,
 }: {
   items: Item[]
   cols?: 2 | 3 | 4
   ratio?: `${number} / ${number}` | string
+  gap?: number
 }) {
   const gridClass =
     cols === 4 ? 'grid cols-4' : cols === 2 ? 'grid cols-2' : 'grid cols-3'
 
   return (
-    <div className={gridClass}>
+    <div className={gridClass} style={{ gap }}>
       {items.map((it, i) => (
         <figure key={i} className="card fig">
           {/* fixed-ratio frame so every image matches */}

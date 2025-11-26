@@ -55,8 +55,9 @@ export default function HomePage() {
           <p className="lead">From interconnects to thermals and custody—clean visuals that match the field.</p>
           <div className="sp-16" />
           <IllustrationStrip
-            cols={3}
-            ratio="16 / 9"
+            cols={2}
+            ratio="4 / 3"
+            gap={12}
             items={[
               { src: '/assets/illustrations/home-1.png', alt: 'Primary system overview', caption: 'System overview' },
               { src: '/assets/illustrations/home-2.png', alt: 'On-lease compute container', caption: 'On-lease compute container' },
