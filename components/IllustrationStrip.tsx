@@ -13,22 +13,26 @@ export default function IllustrationStrip({
   cols = 3,
   ratio = '16 / 9',
   gap = 16,
+  minColWidth,
 }: {
   items: Item[]
   cols?: 2 | 3 | 4
   ratio?: `${number} / ${number}` | string
   gap?: number
+  minColWidth?: number
 }) {
   const gridClass =
     cols === 4 ? 'grid cols-4' : cols === 2 ? 'grid cols-2' : 'grid cols-3'
+  const gridTemplateColumns = minColWidth
+    ? `repeat(auto-fit, minmax(${minColWidth}px, 1fr))`
+    : undefined
 
   return (
-    <div className={gridClass} style={{ gap }}>
+    <div className={gridClass} style={{ gap, gridTemplateColumns }}>
       {items.map((it, i) => {
-        const centerLastSingle = cols > 1 && items.length % cols === 1 && i === items.length - 1
-        const figureStyle = centerLastSingle
-          ? { gridColumn: '1 / -1', justifySelf: 'center', width: 'min(80%, 1100px)' }
-          : undefined
+        const centerLastSingle =
+          !minColWidth && cols > 1 && items.length % cols === 1 && i === items.length - 1
+        const figureStyle = centerLastSingle ? { gridColumn: '1 / -1', justifySelf: 'center', width: 'min(80%, 1100px)' } : undefined
 
         return (
           <figure

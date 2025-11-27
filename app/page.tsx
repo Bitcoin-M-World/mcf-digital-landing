@@ -57,7 +57,8 @@ export default function HomePage() {
           <IllustrationStrip
             cols={2}
             ratio="4 / 3"
-            gap={12}
+            gap={16}
+            minColWidth={420}
             items={[
               { src: '/assets/illustrations/home-1.png', alt: 'Primary system overview', caption: 'System overview' },
               { src: '/assets/illustrations/home-2.png', alt: 'On-lease compute container', caption: 'On-lease compute container' },
