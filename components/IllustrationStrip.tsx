@@ -24,8 +24,19 @@ export default function IllustrationStrip({
 
   return (
     <div className={gridClass} style={{ gap }}>
-      {items.map((it, i) => (
-        <figure key={i} className="card fig">
+      {items.map((it, i) => {
+        const centerLastSingle = cols > 1 && items.length % cols === 1 && i === items.length - 1
+
+        return (
+          <figure
+            key={i}
+            className="card fig"
+            style={
+              centerLastSingle
+                ? { gridColumn: '1 / -1', justifySelf: 'center', maxWidth: 640 }
+                : undefined
+            }
+          >
           {/* fixed-ratio frame so every image matches */}
           <div className="fig-frame" style={{ aspectRatio: ratio }}>
             <Image
@@ -38,8 +49,9 @@ export default function IllustrationStrip({
             />
           </div>
           {it.caption ? <figcaption>{it.caption}</figcaption> : null}
-        </figure>
-      ))}
+          </figure>
+        )
+      })}
     </div>
   )
 }
