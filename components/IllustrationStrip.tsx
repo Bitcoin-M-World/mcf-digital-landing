@@ -26,16 +26,15 @@ export default function IllustrationStrip({
     <div className={gridClass} style={{ gap }}>
       {items.map((it, i) => {
         const centerLastSingle = cols > 1 && items.length % cols === 1 && i === items.length - 1
+        const figureStyle = centerLastSingle
+          ? { gridColumn: '1 / -1', justifySelf: 'center', width: 'min(80%, 1100px)' }
+          : undefined
 
         return (
           <figure
             key={i}
             className="card fig"
-            style={
-              centerLastSingle
-                ? { gridColumn: '1 / -1', justifySelf: 'center', maxWidth: 640 }
-                : undefined
-            }
+            style={figureStyle}
           >
           {/* fixed-ratio frame so every image matches */}
           <div className="fig-frame" style={{ aspectRatio: ratio }}>
